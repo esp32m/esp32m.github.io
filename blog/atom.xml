@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://esp32m.com/blog</id>
+    <title>ESP32 Manager Blog</title>
+    <updated>2021-06-22T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://esp32m.com/blog"/>
+    <subtitle>ESP32 Manager Blog</subtitle>
+    <icon>https://esp32m.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Going Wireless!]]></title>
+        <id>going-wire-less</id>
+        <link href="https://esp32m.com/blog/going-wire-less"/>
+        <updated>2021-06-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quest for Reliability]]></title>
+        <id>reliability-quest</id>
+        <link href="https://esp32m.com/blog/reliability-quest"/>
+        <updated>2021-06-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The story behind]]></title>
+        <id>initial</id>
+        <link href="https://esp32m.com/blog/initial"/>
+        <updated>2021-06-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decied to have some fun building my own!]]></summary>
+    </entry>
+</feed>

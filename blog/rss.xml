@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>ESP32 Manager Blog</title>
+        <link>https://esp32m.com/blog</link>
+        <description>ESP32 Manager Blog</description>
+        <lastBuildDate>Tue, 22 Jun 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Going Wireless!]]></title>
+            <link>https://esp32m.com/blog/going-wire-less</link>
+            <guid>going-wire-less</guid>
+            <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Quest for Reliability]]></title>
+            <link>https://esp32m.com/blog/reliability-quest</link>
+            <guid>reliability-quest</guid>
+            <pubDate>Mon, 21 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:]]></description>
+        </item>
+        <item>
+            <title><![CDATA[The story behind]]></title>
+            <link>https://esp32m.com/blog/initial</link>
+            <guid>initial</guid>
+            <pubDate>Tue, 01 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decied to have some fun building my own!]]></description>
+        </item>
+    </channel>
+</rss>
