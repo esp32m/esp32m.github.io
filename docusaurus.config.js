@@ -8,7 +8,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'esp32m', // Usually your GitHub org/user name.
-  projectName: 'website', // Usually your repo name.
+  projectName: 'esp32m.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'ESP32 Manager',
