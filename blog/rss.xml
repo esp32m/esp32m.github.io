@@ -26,7 +26,7 @@
             <link>https://esp32m.com/blog/initial</link>
             <guid>initial</guid>
             <pubDate>Tue, 01 Jun 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decied to have some fun building my own!]]></description>
+            <description><![CDATA[It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decided to have some fun building my own!]]></description>
         </item>
     </channel>
 </rss>
