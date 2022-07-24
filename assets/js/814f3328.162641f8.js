@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Going Wireless!","permalink":"/blog/going-wire-less"},{"title":"Quest for Reliability","permalink":"/blog/reliability-quest"},{"title":"The story behind","permalink":"/blog/initial"}]}')}}]);

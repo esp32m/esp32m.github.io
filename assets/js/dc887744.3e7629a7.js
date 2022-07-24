@@ -1,1 +1,0 @@
-(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[400],{8723:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"esp-32-m","name":"esp32m","count":3,"permalink":"/blog/tags/esp-32-m"}')}}]);
