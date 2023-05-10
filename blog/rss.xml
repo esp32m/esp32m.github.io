@@ -11,7 +11,7 @@
         <item>
             <title><![CDATA[Going Wireless!]]></title>
             <link>https://esp32m.com/blog/going-wire-less</link>
-            <guid>going-wire-less</guid>
+            <guid>https://esp32m.com/blog/going-wire-less</guid>
             <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:]]></description>
             <content:encoded><![CDATA[<p>No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:</p><p><img loading="lazy" alt="Wires" src="/assets/images/wires-ed5288a8c15ed2828d8e85246dc8d8c4.jpg" width="971" height="901" class="img_ev3q"></p><p>so I designed a couple of PCB's that should cover most of my use cases, and ordered them at <a href="https://jlcpcb.com/" target="_blank" rel="noopener noreferrer">JLCPCB</a>:</p><p><img loading="lazy" alt="PCB01" src="/assets/images/pcb01-0775a4928c5cf07f4ac89daed7bcbb36.png" width="1025" height="605" class="img_ev3q">
@@ -24,7 +24,7 @@ That's 3D rendering, they didn't arrive yet. We'll see how good they actually ar
         <item>
             <title><![CDATA[Quest for Reliability]]></title>
             <link>https://esp32m.com/blog/reliability-quest</link>
-            <guid>reliability-quest</guid>
+            <guid>https://esp32m.com/blog/reliability-quest</guid>
             <pubDate>Mon, 21 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:]]></description>
             <content:encoded><![CDATA[<p>So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:</p><p><img loading="lazy" alt="Reset by IntWdt" src="/assets/images/intwdt-ae2e66647b41a859b1eb97de3c56a570.png" width="843" height="607" class="img_ev3q"></p><p><a href="//docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/wdts.html#interrupt-watchdog" target="_blank" rel="noopener noreferrer">The manual</a> explains:</p><blockquote><p>The interrupt watchdog makes sure the FreeRTOS task switching interrupt isn’t blocked for a long time. This is bad because no other tasks, including potentially important ones  like the WiFi task and the idle task, can’t get any CPU runtime. A blocked task switching interrupt can happen because a program runs into an infinite loop with interrupts disabled or hangs in an interrupt.</p></blockquote><p>Great! Now I need to know which task is responsible for this. We know ESP-IDF dumps some useful info to UART0 when the watchdog is triggered . How nice would it be to send this info over to my logger that passes it on to the rsyslog daemon over UDP! Regretfully, not in this case. If context switches are blocked, WiFi/networking isn't going to function properly, so it is unlikely we're going to succeed with UDP transmission. Additionally, upon reviewing ESP-IDF's panic handler, there isn't a way to redirect or capture an output without modifying the source. So I thought the easiest would be setting up another Raspberry nearby, connect it to ESP32's UART0 and capture the output continuously, which I did.
@@ -36,7 +36,7 @@ stability MAY be related to regulated voltage supply issues in dynamic switching
         <item>
             <title><![CDATA[The story behind]]></title>
             <link>https://esp32m.com/blog/initial</link>
-            <guid>initial</guid>
+            <guid>https://esp32m.com/blog/initial</guid>
             <pubDate>Tue, 01 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decided to have some fun building my own!]]></description>
             <content:encoded><![CDATA[<p>It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decided to have some fun building my own!

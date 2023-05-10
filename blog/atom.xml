@@ -9,7 +9,7 @@
     <icon>https://esp32m.com/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Going Wireless!]]></title>
-        <id>going-wire-less</id>
+        <id>https://esp32m.com/blog/going-wire-less</id>
         <link href="https://esp32m.com/blog/going-wire-less"/>
         <updated>2021-06-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:]]></summary>
@@ -26,7 +26,7 @@ That's 3D rendering, they didn't arrive yet. We'll see how good they actually ar
     </entry>
     <entry>
         <title type="html"><![CDATA[Quest for Reliability]]></title>
-        <id>reliability-quest</id>
+        <id>https://esp32m.com/blog/reliability-quest</id>
         <link href="https://esp32m.com/blog/reliability-quest"/>
         <updated>2021-06-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:]]></summary>
@@ -42,7 +42,7 @@ stability MAY be related to regulated voltage supply issues in dynamic switching
     </entry>
     <entry>
         <title type="html"><![CDATA[The story behind]]></title>
-        <id>initial</id>
+        <id>https://esp32m.com/blog/initial</id>
         <link href="https://esp32m.com/blog/initial"/>
         <updated>2021-06-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[It started as a simple home automation project. I was looking for a way to do the most basic things like track temperature/humidity, switch the lights, open water valve in the greenhouse, turn on the fan when it gets too hot, etc. So I looked into some ready-made automation kits and... decided to have some fun building my own!]]></summary>
