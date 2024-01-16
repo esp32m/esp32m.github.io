@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LC1CTFLW8"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-4LC1CTFLW8",{})</script><link rel="stylesheet" href="/assets/css/styles.cda39749.css">
-<script src="/assets/js/runtime~main.83b12abb.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3a466093.js" defer="defer"></script>
 <script src="/assets/js/main.32b68ca9.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,7 +26,7 @@ You can now open <a href="http://localhost:9000" target="_blank" rel="noopener n
 <ul>
 <li>remove <code>&quot;web-ui&quot;</code> from <code>EXTRA_COMPONENT_DIRS</code> in <code>CMakeLists.txt</code></li>
 <li>remove <code>web-ui</code> from <code>PRIV_REQUIRES</code> in <code>main/CMakeLists.txt</code></li>
-<li>in <code>main/main.cpp</code>, remove <code>#include &lt;ui.hpp&gt;</code> and replace <code>initUi(new Ui(new ui::Httpd()));</code> with <code>new Ui(new ui::Httpd());</code></li>
+<li>in <code>main/main.cpp</code>, remove <code>#include &lt;dist/ui.hpp&gt;</code> and replace <code>initUi(new Ui(new ui::Httpd()));</code> with <code>new Ui(new ui::Httpd());</code></li>
 </ul>
 <p>This will remove compiled javascript and HTML files from the firmware, but will keep the Websocket server on the chip, allowing you to connect remotely with the IP address as explained above.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="remove-websockets-server-from-the-firmware">Remove Websockets server from the firmware<a href="#remove-websockets-server-from-the-firmware" class="hash-link" aria-label="Direct link to Remove Websockets server from the firmware" title="Direct link to Remove Websockets server from the firmware">​</a></h2>
