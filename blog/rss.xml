@@ -15,10 +15,10 @@
             <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:]]></description>
             <content:encoded><![CDATA[<p>No, I'm not talking WiFi or Bluetooth. I just want to get rid of this clew of wires:</p>
-<p><img loading="lazy" alt="Wires" src="https://esp32m.com/assets/images/wires-ed5288a8c15ed2828d8e85246dc8d8c4.jpg" width="971" height="901" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Wires" src="https://esp32m.com/assets/images/wires-ed5288a8c15ed2828d8e85246dc8d8c4.jpg" width="971" height="901" class="img_ev3q"></p>
 <p>so I designed a couple of PCB's that should cover most of my use cases, and ordered them at <a href="https://jlcpcb.com/" target="_blank" rel="noopener noreferrer">JLCPCB</a>:</p>
-<p><img loading="lazy" alt="PCB01" src="https://esp32m.com/assets/images/pcb01-0775a4928c5cf07f4ac89daed7bcbb36.png" width="1025" height="605" class="img_ev3q">
-<img loading="lazy" alt="PCB02" src="https://esp32m.com/assets/images/pcb02-ed8f54dfcdcf47bacad7dbe7beaf0ce2.png" width="757" height="654" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="PCB01" src="https://esp32m.com/assets/images/pcb01-0775a4928c5cf07f4ac89daed7bcbb36.png" width="1025" height="605" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="PCB02" src="https://esp32m.com/assets/images/pcb02-ed8f54dfcdcf47bacad7dbe7beaf0ce2.png" width="757" height="654" class="img_ev3q"></p>
 <p>Nice, huh?
 That's 3D rendering, they didn't arrive yet. We'll see how good they actually are in a couple of weeks.</p>]]></content:encoded>
             <category>esp32m</category>
@@ -32,7 +32,7 @@ That's 3D rendering, they didn't arrive yet. We'll see how good they actually ar
             <pubDate>Mon, 21 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:]]></description>
             <content:encoded><![CDATA[<p>So it all has been working nicely for the past couple of weeks, with one exception. Every few days I see unexpected reboots, and about once a month - permanent freeze in at least one of the boards. Luckily, ESP32 has reset reason register, and I have made it available in the UI:</p>
-<p><img loading="lazy" alt="Reset by IntWdt" src="https://esp32m.com/assets/images/intwdt-ae2e66647b41a859b1eb97de3c56a570.png" width="843" height="607" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Reset by IntWdt" src="https://esp32m.com/assets/images/intwdt-ae2e66647b41a859b1eb97de3c56a570.png" width="843" height="607" class="img_ev3q"></p>
 <p><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/wdts.html#interrupt-watchdog" target="_blank" rel="noopener noreferrer">The manual</a> explains:</p>
 <blockquote>
 <p>The interrupt watchdog makes sure the FreeRTOS task switching interrupt isn’t blocked for a long time. This is bad because no other tasks, including potentially important ones  like the WiFi task and the idle task, can’t get any CPU runtime. A blocked task switching interrupt can happen because a program runs into an infinite loop with interrupts disabled or hangs in an interrupt.</p>
@@ -45,9 +45,9 @@ Results were puzzling, to say the least. Every time I saw <em>different</em> off
 stability MAY be related to regulated voltage supply issues in dynamic switching conditions  (you may not see this without use of oscilloscope to capture the events as they may happen quickly enough to leave the IC in an indeterminate state - ie not enough time OFF to actually reset - or not low enough to actually reset but enough to cause what is known as a brown reset where SOME functions of IC reset but not all. Other possible sources of issues look to be the isolation strategy.</p>
 </blockquote>
 <p>It was a revelation. I suddenly remembered that I have another ESP32 powered by a battery, with awful wiring, but an uptime of 46 days!</p>
-<p><img loading="lazy" alt="Reset by IntWdt" src="https://esp32m.com/assets/images/lipoti-uptime-a6ddcdf9e92fc9279aa70d118e5528d8.png" width="850" height="610" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Reset by IntWdt" src="https://esp32m.com/assets/images/lipoti-uptime-a6ddcdf9e92fc9279aa70d118e5528d8.png" width="850" height="610" class="img_ev3q"></p>
 <p>Those freezing and rebooting setups were powered by these modules:</p>
-<p><img loading="lazy" alt="HLK-PM01" src="https://esp32m.com/assets/images/hlk-pm01-6b3c22a1db7f0365cd3191c4a1ee83a4.gif" width="592" height="600" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="HLK-PM01" src="https://esp32m.com/assets/images/hlk-pm01-6b3c22a1db7f0365cd3191c4a1ee83a4.gif" width="592" height="600" class="img_ev3q"></p>
 <p>as I needed 5v for some of the sensors, and then I used voltage regulator (LD1117 or similar) for 3.3v to power the ESP32. And of course I didn't use any of the capacitors recommended by the datasheet. Real heros don't read datasheets, lol. Now the capacitors are in place, and the problem is solved. Don't be like me, <em>Read The F</em>**<em>ng Manuals!</em></p>]]></content:encoded>
             <category>esp32m</category>
             <category>reliability</category>
@@ -62,10 +62,10 @@ stability MAY be related to regulated voltage supply issues in dynamic switching
 The idea was to set up WiFi-capable devices all over the place (luckily, my WiFi coverage allows that) and wire them to the switches/relays/sensors etc.
 My first try was Raspberry PI + USB relay module, driven by a python script. Works well for one or two locations, but if you want a dozen - it is an overkill and gets pricey.
 The next thing I tried was STM32 ("Blue Pill") module wired to ESP8266. STM32 is great to read multiple sensors and control several devices, but doesn't have any networking features. ESP8266 is a WiFi chip, but has a very limited number of I/O ports. Together they make a great combo, but there are cons. For example, I had to maintain 2 different firmwares, implement a protocol for the chips to talk to each other, put up with reliability issues because all connections were manually soldered and looked like this:</p>
-<p><img loading="lazy" alt="Manually connected ESP822 and STM32" src="https://esp32m.com/assets/images/esp8266_stm32_soldered-dfeae5b83b86e5e4d73f313e07bc5880.jpg" width="1073" height="410" class="img_ev3q">
+<p><img decoding="async" loading="lazy" alt="Manually connected ESP822 and STM32" src="https://esp32m.com/assets/images/esp8266_stm32_soldered-dfeae5b83b86e5e4d73f313e07bc5880.jpg" width="1073" height="410" class="img_ev3q">
 Another thing is the amount of available RAM/flash, that is pretty restrictive on both chips.</p>
 <p>Finally, I found this beautiful ESP32 module that had everything I could ever think of, and more - in a single tiny module, for a very competitive price (N.B.: no, I'm not paid to advertise ESP32, nor am I affiliated with Espressif in any way. I was just truly fascinated by the chip).</p>
-<p><img loading="lazy" alt="ESP32-S module" src="https://esp32m.com/assets/images/esp32-s-9b595c94e2735ac2f251d27035186b92.jpg" width="450" height="297" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="ESP32-S module" src="https://esp32m.com/assets/images/esp32-s-9b595c94e2735ac2f251d27035186b92.jpg" width="450" height="297" class="img_ev3q"></p>
 <p>Now I could easily connect 5 different sensors, 2 relays, 2 H-bridges, several LEDs and a buzzer, and make it all accessible over WiFi! The last missing piece of the puzzle was the software. At first, Arduino seemed like a very natural choice. There's support for ESP32, you get access to all the modules that mostly work well, the community is great, learning is easy, and it is a de-facto standard for simple MCU projects.
 But... there's a flipside:</p>
 <ul>
